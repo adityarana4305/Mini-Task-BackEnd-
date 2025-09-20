@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body>
+    <div class="main w-full min-h-screen bg-zinc-800 text-white p-10">
+        <form action="/edit" method="post">
+        <input type="text" class="block w-full resize-none bg-zinc-600 rounded-md" name="newtitle" value="<%= filename.replace(/.txt/g,'') %>">
+        <textarea name="editarea" class="block mt-3 w-full resize-none bg-zinc-600 rounded-md"><%= filedata %></textarea>
+        <input class="block bg-blue-500 mt-5 font-bold rounded-md" type="submit" value="Edit✅">
+        </form>
+    </div>
+    
+</body>
+</html>
